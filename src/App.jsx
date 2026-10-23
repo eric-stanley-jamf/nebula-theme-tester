@@ -5,6 +5,7 @@ import { FormsSection } from './components/sections/FormsSection';
 import { CardsSection } from './components/sections/CardsSection';
 import { BadgesSection } from './components/sections/BadgesSection';
 import { AlertsSection } from './components/sections/AlertsSection';
+import { ChartsSection } from './components/sections/ChartsSection';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <CardsSection />
         <BadgesSection />
         <AlertsSection />
+        <ChartsSection />
       </main>
 
       <footer className="border-t border-border px-6 py-4 text-center text-xs text-on-surface-tertiary">
