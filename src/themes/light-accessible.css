@@ -1,0 +1,54 @@
+/* ============================================================
+   LIGHT ACCESSIBLE THEME — Apple HIG Accessible Colors (Light)
+   All interactive colors meet WCAG AA (4.5:1 minimum contrast ratio)
+   https://developer.apple.com/design/human-interface-guidelines/color
+   ============================================================ */
+
+[data-theme="light-accessible"] {
+  /* --- Surfaces (same as light — backgrounds don't affect contrast) --- */
+  --surface:        #FFFFFF;
+  --surface-raised: #FFFFFF;
+  --surface-sunken: #F2F2F7;
+
+  /* --- Text — solid values, no alpha (improves contrast on any bg) --- */
+  --on-surface:           #000000;
+  --on-surface-secondary: #3C3C43;   /* Fully opaque (vs. alpha in standard) */
+  --on-surface-tertiary:  #6C6C70;   /* Lifted for readability */
+
+  /* --- Borders — slightly stronger --- */
+  --border:        #A9A9AE;
+  --border-subtle: #C7C7CC;
+
+  /* --- Primary Interactive (Accessible Blue Light) --- */
+  --primary:       #0040DD;   /* Accessible System Blue (light) */
+  --primary-hover: #002FA3;
+  --on-primary:    #FFFFFF;
+
+  /* --- Secondary Interactive --- */
+  --secondary:       #F2F2F7;
+  --secondary-hover: #E5E5EA;
+  --on-secondary:    #0040DD;
+
+  /* --- Success (Accessible Green Light) --- */
+  --success:         #248A3D;   /* Accessible System Green (light) */
+  --success-surface: #D4EDDA;
+  --on-success:      #FFFFFF;
+
+  /* --- Warning (Accessible Yellow Light) --- */
+  --warning:         #946800;   /* Accessible System Yellow (light) — dark enough for AA */
+  --warning-surface: #FFF3CD;
+  --on-warning:      #FFFFFF;
+
+  /* --- Error (Accessible Red Light) --- */
+  --error:         #D70015;   /* Accessible System Red (light) */
+  --error-surface: #FFDDD8;
+  --on-error:      #FFFFFF;
+
+  /* --- Info --- */
+  --info:         #0040DD;
+  --info-surface: #D6EBFF;
+  --on-info:      #FFFFFF;
+
+  /* --- Focus Ring --- */
+  --focus-ring: #0040DD;
+}

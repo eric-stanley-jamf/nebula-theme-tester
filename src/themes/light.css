@@ -1,0 +1,53 @@
+/* ============================================================
+   LIGHT THEME — Apple HIG System Colors
+   https://developer.apple.com/design/human-interface-guidelines/color
+   ============================================================ */
+
+[data-theme="light"] {
+  /* --- Surfaces --- */
+  --surface:          #FFFFFF;   /* System Background */
+  --surface-raised:   #FFFFFF;   /* Secondary surface (cards, sheets) */
+  --surface-sunken:   #F2F2F7;   /* Grouped / secondary background */
+
+  /* --- Text (Labels) --- */
+  --on-surface:           #000000;   /* Label */
+  --on-surface-secondary: #3C3C43;   /* Secondary Label */
+  --on-surface-tertiary:  #C7C7CC;   /* Tertiary Label / placeholder */
+
+  /* --- Borders & Separators --- */
+  --border:        #C6C6C8;   /* Separator */
+  --border-subtle: #E5E5EA;
+
+  /* --- Primary Interactive (Blue) --- */
+  --primary:       #007AFF;   /* System Blue */
+  --primary-hover: #0066D6;
+  --on-primary:    #FFFFFF;
+
+  /* --- Secondary Interactive --- */
+  --secondary:       #F2F2F7;
+  --secondary-hover: #E5E5EA;
+  --on-secondary:    #007AFF;
+
+  /* --- Success (Green) --- */
+  --success:         #34C759;   /* System Green */
+  --success-surface: #D4EDDA;
+  --on-success:      #FFFFFF;
+
+  /* --- Warning (Yellow) --- */
+  --warning:         #FFCC00;   /* System Yellow */
+  --warning-surface: #FFF3CD;
+  --on-warning:      #000000;
+
+  /* --- Error (Red) --- */
+  --error:         #FF3B30;   /* System Red */
+  --error-surface: #FFDDD8;
+  --on-error:      #FFFFFF;
+
+  /* --- Info (Blue — same as primary in light) --- */
+  --info:         #007AFF;
+  --info-surface: #D6EBFF;
+  --on-info:      #FFFFFF;
+
+  /* --- Focus Ring --- */
+  --focus-ring: #007AFF;
+}

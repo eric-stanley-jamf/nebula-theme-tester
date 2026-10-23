@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@import "./themes/light.css";
+@import "./themes/dark.css";
+@import "./themes/light-accessible.css";
+@import "./themes/dark-accessible.css";
+
+/*
+  @theme inline maps semantic CSS variables to Tailwind color utilities.
+  e.g. --color-primary → bg-primary, text-primary, border-primary, etc.
+  The `inline` keyword means Tailwind references the var() at runtime
+  rather than compiling the value in — enabling live theme switching.
+*/
+@theme inline {
+  /* Surfaces */
+  --color-surface:        var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+
+  /* Text */
+  --color-on-surface:           var(--on-surface);
+  --color-on-surface-secondary: var(--on-surface-secondary);
+  --color-on-surface-tertiary:  var(--on-surface-tertiary);
+
+  /* Borders */
+  --color-border:        var(--border);
+  --color-border-subtle: var(--border-subtle);
+
+  /* Primary */
+  --color-primary:       var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-on-primary:    var(--on-primary);
+
+  /* Secondary */
+  --color-secondary:       var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-on-secondary:    var(--on-secondary);
+
+  /* Success */
+  --color-success:         var(--success);
+  --color-success-surface: var(--success-surface);
+  --color-on-success:      var(--on-success);
+
+  /* Warning */
+  --color-warning:         var(--warning);
+  --color-warning-surface: var(--warning-surface);
+  --color-on-warning:      var(--on-warning);
+
+  /* Error */
+  --color-error:         var(--error);
+  --color-error-surface: var(--error-surface);
+  --color-on-error:      var(--on-error);
+
+  /* Info */
+  --color-info:         var(--info);
+  --color-info-surface: var(--info-surface);
+  --color-on-info:      var(--on-info);
+
+  /* Focus */
+  --color-focus-ring: var(--focus-ring);
+}
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+}

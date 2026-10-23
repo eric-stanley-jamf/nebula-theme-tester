@@ -1,0 +1,53 @@
+/* ============================================================
+   DARK THEME — Apple HIG System Colors (Dark)
+   https://developer.apple.com/design/human-interface-guidelines/color
+   ============================================================ */
+
+[data-theme="dark"] {
+  /* --- Surfaces --- */
+  --surface:        #000000;   /* System Background (dark) */
+  --surface-raised: #1C1C1E;   /* Secondary System Background (dark) */
+  --surface-sunken: #1C1C1E;   /* Grouped Background (dark) */
+
+  /* --- Text (Labels) --- */
+  --on-surface:           #FFFFFF;   /* Label (dark) */
+  --on-surface-secondary: #EBEBF5;   /* Secondary Label (dark) */
+  --on-surface-tertiary:  #48484A;   /* Tertiary Label (dark) */
+
+  /* --- Borders & Separators --- */
+  --border:        #38383A;   /* Separator (dark) */
+  --border-subtle: #2C2C2E;
+
+  /* --- Primary Interactive (Blue) --- */
+  --primary:       #0A84FF;   /* System Blue (dark) */
+  --primary-hover: #409CFF;
+  --on-primary:    #FFFFFF;
+
+  /* --- Secondary Interactive --- */
+  --secondary:       #1C1C1E;
+  --secondary-hover: #2C2C2E;
+  --on-secondary:    #0A84FF;
+
+  /* --- Success (Green) --- */
+  --success:         #30D158;   /* System Green (dark) */
+  --success-surface: #1A2E20;
+  --on-success:      #000000;
+
+  /* --- Warning (Yellow) --- */
+  --warning:         #FFD60A;   /* System Yellow (dark) */
+  --warning-surface: #272210;
+  --on-warning:      #000000;
+
+  /* --- Error (Red) --- */
+  --error:         #FF453A;   /* System Red (dark) */
+  --error-surface: #2D1511;
+  --on-error:      #FFFFFF;
+
+  /* --- Info (Blue — same as primary in dark) --- */
+  --info:         #0A84FF;
+  --info-surface: #081A33;
+  --on-info:      #FFFFFF;
+
+  /* --- Focus Ring --- */
+  --focus-ring: #0A84FF;
+}

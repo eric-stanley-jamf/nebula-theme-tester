@@ -1,0 +1,54 @@
+/* ============================================================
+   DARK ACCESSIBLE THEME — Apple HIG Accessible Colors (Dark)
+   All interactive colors meet WCAG AA (4.5:1 minimum contrast ratio)
+   https://developer.apple.com/design/human-interface-guidelines/color
+   ============================================================ */
+
+[data-theme="dark-accessible"] {
+  /* --- Surfaces (same as dark) --- */
+  --surface:        #000000;
+  --surface-raised: #1C1C1E;
+  --surface-sunken: #1C1C1E;
+
+  /* --- Text --- */
+  --on-surface:           #FFFFFF;
+  --on-surface-secondary: #EBEBF5;
+  --on-surface-tertiary:  #636366;   /* Lifted slightly from dark standard */
+
+  /* --- Borders — slightly stronger --- */
+  --border:        #545458;
+  --border-subtle: #3A3A3C;
+
+  /* --- Primary Interactive (Accessible Blue Dark) --- */
+  --primary:       #409CFF;   /* Accessible System Blue (dark) */
+  --primary-hover: #6FB4FF;
+  --on-primary:    #000000;   /* Black text on light blue for AA contrast */
+
+  /* --- Secondary Interactive --- */
+  --secondary:       #2C2C2E;
+  --secondary-hover: #3A3A3C;
+  --on-secondary:    #409CFF;
+
+  /* --- Success (Accessible Green Dark) --- */
+  --success:         #30DB5B;   /* Accessible System Green (dark) */
+  --success-surface: #1A2E20;
+  --on-success:      #000000;
+
+  /* --- Warning (Accessible Yellow Dark) --- */
+  --warning:         #FFD426;   /* Accessible System Yellow (dark) */
+  --warning-surface: #272210;
+  --on-warning:      #000000;
+
+  /* --- Error (Accessible Red Dark) --- */
+  --error:         #FF6961;   /* Accessible System Red (dark) */
+  --error-surface: #2D1511;
+  --on-error:      #000000;
+
+  /* --- Info --- */
+  --info:         #409CFF;
+  --info-surface: #081A33;
+  --on-info:      #000000;
+
+  /* --- Focus Ring --- */
+  --focus-ring: #409CFF;
+}
