@@ -7,14 +7,17 @@
     <!-- Prevent flash of wrong theme by resolving before React renders -->
     <script>
       (function () {
-        var mode = localStorage.getItem('nebula-color-mode') || 'system';
-        var hc = localStorage.getItem('nebula-high-contrast') === 'true';
-        // System + no high contrast: let CSS prefers-color-scheme handle it
-        if (mode === 'system' && !hc) return;
-        var base =
-          mode === 'system'
-            ? window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-            : mode;
+        var colorMode    = localStorage.getItem('nebula-color-mode') || 'system';
+        var contrastMode = localStorage.getItem('nebula-contrast-mode') || 'manual';
+        var manualHC     = localStorage.getItem('nebula-high-contrast') === 'true';
+        var hc = contrastMode === 'system'
+          ? window.matchMedia('(prefers-contrast: more)').matches
+          : manualHC;
+        // System color + no high contrast: let CSS prefers-color-scheme handle it
+        if (colorMode === 'system' && !hc) return;
+        var base = colorMode === 'system'
+          ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+          : colorMode;
         document.documentElement.setAttribute('data-theme', hc ? base + '-accessible' : base);
       })();
     </script>
