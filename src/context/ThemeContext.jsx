@@ -23,12 +23,17 @@ export function ThemeProvider({ children }) {
   );
 
   useEffect(() => {
+    if (colorMode === 'system' && !highContrast) {
+      // Let CSS prefers-color-scheme media query handle it — no data-theme needed
+      document.documentElement.removeAttribute('data-theme');
+      return;
+    }
     document.documentElement.setAttribute('data-theme', resolveTheme(colorMode, highContrast));
   }, [colorMode, highContrast]);
 
-  // Re-resolve when system preference changes
+  // JS listener only needed when system + high contrast (to pick the right accessible variant)
   useEffect(() => {
-    if (colorMode !== 'system') return;
+    if (colorMode !== 'system' || !highContrast) return;
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
     const handler = () => {
       document.documentElement.setAttribute('data-theme', resolveTheme('system', highContrast));

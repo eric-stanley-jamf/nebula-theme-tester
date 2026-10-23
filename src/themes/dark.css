@@ -51,3 +51,45 @@
   /* --- Focus Ring --- */
   --focus-ring: #0A84FF;
 }
+
+/* CSS-native system dark — applies when no explicit data-theme is set */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --surface:        #000000;
+    --surface-raised: #1C1C1E;
+    --surface-sunken: #1C1C1E;
+
+    --on-surface:           #FFFFFF;
+    --on-surface-secondary: #EBEBF5;
+    --on-surface-tertiary:  #48484A;
+
+    --border:        #38383A;
+    --border-subtle: #2C2C2E;
+
+    --primary:       #0A84FF;
+    --primary-hover: #409CFF;
+    --on-primary:    #FFFFFF;
+
+    --secondary:       #1C1C1E;
+    --secondary-hover: #2C2C2E;
+    --on-secondary:    #0A84FF;
+
+    --success:         #30D158;
+    --success-surface: #1A2E20;
+    --on-success:      #000000;
+
+    --warning:         #FFD60A;
+    --warning-surface: #272210;
+    --on-warning:      #000000;
+
+    --error:         #FF453A;
+    --error-surface: #2D1511;
+    --on-error:      #FFFFFF;
+
+    --info:         #0A84FF;
+    --info-surface: #081A33;
+    --on-info:      #FFFFFF;
+
+    --focus-ring: #0A84FF;
+  }
+}

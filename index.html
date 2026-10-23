@@ -9,16 +9,13 @@
       (function () {
         var mode = localStorage.getItem('nebula-color-mode') || 'system';
         var hc = localStorage.getItem('nebula-high-contrast') === 'true';
+        // System + no high contrast: let CSS prefers-color-scheme handle it
+        if (mode === 'system' && !hc) return;
         var base =
           mode === 'system'
-            ? window.matchMedia('(prefers-color-scheme: dark)').matches
-              ? 'dark'
-              : 'light'
+            ? window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
             : mode;
-        document.documentElement.setAttribute(
-          'data-theme',
-          hc ? base + '-accessible' : base
-        );
+        document.documentElement.setAttribute('data-theme', hc ? base + '-accessible' : base);
       })();
     </script>
   </head>

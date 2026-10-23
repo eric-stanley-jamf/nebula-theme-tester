@@ -3,6 +3,8 @@
    https://developer.apple.com/design/human-interface-guidelines/color
    ============================================================ */
 
+/* :root makes light the default — no data-theme needed when system prefers light */
+:root,
 [data-theme="light"] {
   /* --- Surfaces --- */
   --surface:          #FFFFFF;   /* System Background */
